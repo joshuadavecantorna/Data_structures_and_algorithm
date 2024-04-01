@@ -42,8 +42,6 @@ def graph_all_expressions(x_values, y_values_dict):# dito naman yung graph if la
     plt.grid(True)
     plt.show()
 
-functions_result_write({})
-
 try:
     choice = int(input("\nEnter the number of the expression you want to solve: "))#pipili ang user kung ano na equation ang kanyang i solve
     
@@ -55,7 +53,7 @@ try:
         
         graph_all_expressions(x_values, y_values_dict)
 
-        functions_result_write(x_values, y_values_dict)
+        functions_result_write(y_values_dict)
         
     elif 1 <= choice <= len(all_expressions.expressions):
         expression_name = list(all_expressions.expressions.keys())[choice - 1]
